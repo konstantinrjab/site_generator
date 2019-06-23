@@ -4,9 +4,6 @@ from generators.HeaderGenerator import HeaderGenerator
 
 class HtmlPageGenerator:
     def generate(self):
-        return self.__sceleton()
-
-    def __sceleton(self):
         return '<!doctype html><html lang="en">' + self.__head() + self.__body()+'</html>'
 
     def __head(self):

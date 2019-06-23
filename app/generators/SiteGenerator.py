@@ -9,6 +9,7 @@ class SiteGenerator:
     def generate(self):
         html_page = HtmlPageGenerator().generate()
         self.__save_file(html_page)
+
         return html_page
 
     def __save_file(self, html_page):
