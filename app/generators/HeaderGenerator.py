@@ -25,6 +25,6 @@ class HeaderGenerator:
         ]
         meta_tags = ''
         for meta_tag_data in meta_tags_data:
-            meta_tags += ' ' + MetaTag(meta_tag_data).get_formatted() + ' '
+            meta_tags += MetaTag(meta_tag_data).get_formatted()
 
         return meta_tags

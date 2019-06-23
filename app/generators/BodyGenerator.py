@@ -1,15 +1,16 @@
 from tags.ParagraphTag import ParagraphTag
 from tags.BodyTag import BodyTag
+from tags.SectionTag import SectionTag
 from generators.ImageGenerator import ImageGenerator
 import lorem
 
 
 class BodyGenerator:
-    SECTIONS_COUNT = 2
+    __SECTIONS_COUNT = 2
 
     def generate(self):
         sections = ''
-        for sectionsCount in range(self.SECTIONS_COUNT):
+        for sectionsCount in range(self.__SECTIONS_COUNT):
             sections += self.__generate_section()
 
         return BodyTag(sections).get_formatted()
@@ -17,5 +18,6 @@ class BodyGenerator:
     def __generate_section(self):
         paragraph = ParagraphTag(lorem.sentence()).get_formatted()
         image = ImageGenerator().generate()
+        section = SectionTag(paragraph + image).get_formatted()
 
-        return paragraph + image
+        return section
