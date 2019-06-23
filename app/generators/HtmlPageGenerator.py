@@ -4,10 +4,13 @@ from generators.HeaderGenerator import HeaderGenerator
 
 class HtmlPageGenerator:
     def generate(self):
-        return self.__generate_header() + self.__generate_body()
+        return self.__sceleton()
 
-    def __generate_header(self):
+    def __sceleton(self):
+        return '<!doctype html><html lang="en">' + self.__head() + self.__body()+'</html>'
+
+    def __head(self):
         return HeaderGenerator().generate()
 
-    def __generate_body(self):
+    def __body(self):
         return BodyGenerator().generate()

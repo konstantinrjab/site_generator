@@ -1,6 +1,6 @@
 from tags.ImageTag import ImageTag
-from PIL import Image
 from generators.StringGenerator import StringGenerator
+from PIL import Image
 import numpy
 import os
 
