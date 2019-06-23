@@ -22,4 +22,4 @@ class ImageGenerator:
         return ImageTag(self.IMAGE_SOURCE_PATH + filename).get_formatted()
 
     def __get_filename(self):
-        return StringGenerator().get(self.FILENAME_LENGTH) + '.jpg'
+        return StringGenerator().get_random_string(self.FILENAME_LENGTH) + '.jpg'
