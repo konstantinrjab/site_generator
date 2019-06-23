@@ -14,11 +14,11 @@ class CleanupHelper:
                 print(e)
 
     def __get_files(self):
-        site_folder = self.__SITE_FOLDER
-        site_folder = site_folder + self.__IMAGE_SUBFOLDER
+        root_folder = self.__SITE_FOLDER
+        images_folder = root_folder + self.__IMAGE_SUBFOLDER
         files = []
-        files.extend(self.__get_html_files(site_folder))
-        files.extend(self.__get_image_files(site_folder))
+        files.extend(self.__get_html_files(root_folder))
+        files.extend(self.__get_image_files(images_folder))
 
         return files
 
