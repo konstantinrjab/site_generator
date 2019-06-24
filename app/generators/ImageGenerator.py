@@ -7,7 +7,7 @@ import os
 
 
 class ImageGenerator:
-    FILENAME_LENGTH = 10
+    FILENAME_LENGTH = 15
     IMAGE_DIRECTORY = '/site/img/'
     IMAGE_SOURCE_PATH = '/img/'
     IMAGE_HEIGHT = 100

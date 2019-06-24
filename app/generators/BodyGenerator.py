@@ -6,7 +6,7 @@ import lorem
 
 
 class BodyGenerator:
-    __SECTIONS_COUNT = 2
+    __SECTIONS_COUNT = 5
 
     def generate(self):
         sections = ''
