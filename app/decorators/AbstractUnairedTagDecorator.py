@@ -1,26 +1,18 @@
-from abc import ABC
+from decorators.AbstractTagDecorator import AbstractTagDecorator
 
 
-class AbstractUnpairedTagDecorator(ABC):
+class AbstractUnpairedTagDecorator(AbstractTagDecorator):
     _name = ''
-    _attributes = []
 
-    def __init__(self, name, attributes):
-        self._attributes = attributes
+    def __init__(self, name, attributes=None):
         self._name = name
+        super().__init__(attributes)
 
     def get_formatted(self):
-        return self.__get_open_tag() + self.__get_attributes() + self.__get_close_tag()
+        return self.__get_open_tag() + self._get_attributes() + self.__get_close_tag()
 
     def __get_open_tag(self):
         return '<' + self._name
 
     def __get_close_tag(self):
         return '>'
-
-    def __get_attributes(self):
-        attributes = ''
-        for name, value in self._attributes.items():
-            attributes += ' ' + name + '="' + value + '" '
-
-        return attributes
