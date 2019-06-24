@@ -1,5 +1,6 @@
 from generators.SiteGenerator import SiteGenerator
 from helpers.CleanupHelper import CleanupHelper
 
+pages_count = 10
 CleanupHelper().site_folder()
-print(SiteGenerator().generate(5))
+SiteGenerator().generate(pages_count)
