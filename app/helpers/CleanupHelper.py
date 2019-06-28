@@ -1,8 +1,9 @@
 import os
+from helpers.PathHelper import PathHelper
 
 
 class CleanupHelper:
-    __SITE_FOLDER = os.getcwd() + '/site'
+    __SITE_FOLDER = os.getcwd() + '/../site'
     __IMAGE_SUBFOLDER = '/img/'
 
     def site_folder(self):
@@ -14,11 +15,9 @@ class CleanupHelper:
                 print(e)
 
     def __get_files(self):
-        root_folder = self.__SITE_FOLDER
-        images_folder = root_folder + self.__IMAGE_SUBFOLDER
         files = []
-        files.extend(self.__get_html_files(root_folder))
-        files.extend(self.__get_image_files(images_folder))
+        files.extend(self.__get_html_files(PathHelper.get_site_folder()))
+        files.extend(self.__get_image_files(PathHelper.get_image_folder()))
 
         return files
 

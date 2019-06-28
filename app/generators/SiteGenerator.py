@@ -4,7 +4,7 @@ import os
 
 
 class SiteGenerator:
-    SITE_FOLDER = '/site/'
+    SITE_FOLDER = '/../site/'
 
     def generate(self, pages_count):
         file_names = self.__get_file_names(pages_count)
