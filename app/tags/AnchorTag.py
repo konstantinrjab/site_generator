@@ -1,7 +1,7 @@
-from decorators.AbstractPairedTagDecorator import AbstractPairedTagDecorator
+from decorators.PairedTagDecorator import PairedTagDecorator
 
 
-class AnchorTag(AbstractPairedTagDecorator):
+class AnchorTag(PairedTagDecorator):
     NAME = 'a'
 
     def __init__(self, link):

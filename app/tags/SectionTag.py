@@ -1,7 +1,7 @@
-from decorators.AbstractPairedTagDecorator import AbstractPairedTagDecorator
+from decorators.PairedTagDecorator import PairedTagDecorator
 
 
-class SectionTag(AbstractPairedTagDecorator):
+class SectionTag(PairedTagDecorator):
     NAME = 'section'
 
     def __init__(self, content):

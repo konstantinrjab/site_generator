@@ -1,7 +1,7 @@
 from decorators.AbstractTagDecorator import AbstractTagDecorator
 
 
-class AbstractUnpairedTagDecorator(AbstractTagDecorator):
+class UnpairedTagDecorator(AbstractTagDecorator):
     _name = ''
 
     def __init__(self, name, attributes=None):

@@ -3,10 +3,10 @@ from helpers.PathHelper import PathHelper
 
 
 class CleanupHelper:
-    __SITE_FOLDER = os.getcwd() + '/../site'
-    __IMAGE_SUBFOLDER = '/img/'
+    __HTML_EXTENSION = 'html'
+    __IMG_EXTENSION = 'jpg'
 
-    def site_folder(self):
+    def cleanup_site_folder(self):
         for file in self.__get_files():
             try:
                 if os.path.isfile(file):
@@ -24,13 +24,13 @@ class CleanupHelper:
     def __get_html_files(self, folder):
         html_files = []
         for file in os.listdir(folder):
-            if file.endswith('.html'):
+            if file.endswith(self.__HTML_EXTENSION):
                 html_files.append(os.path.join(folder, file))
         return html_files
 
     def __get_image_files(self, folder):
         image_files = []
         for file in os.listdir(folder):
-            if file.endswith('.jpg'):
+            if file.endswith(self.__IMG_EXTENSION):
                 image_files.append(os.path.join(folder, file))
         return image_files

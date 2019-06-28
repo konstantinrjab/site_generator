@@ -1,7 +1,7 @@
-from decorators.AbstractUnairedTagDecorator import AbstractUnpairedTagDecorator
+from decorators.UnairedTagDecorator import UnpairedTagDecorator
 
 
-class MetaTag(AbstractUnpairedTagDecorator):
+class MetaTag(UnpairedTagDecorator):
     NAME = 'meta'
 
     def __init__(self, attributes):

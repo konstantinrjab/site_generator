@@ -1,7 +1,7 @@
-from decorators.AbstractPairedTagDecorator import AbstractPairedTagDecorator
+from decorators.PairedTagDecorator import PairedTagDecorator
 
 
-class BodyTag(AbstractPairedTagDecorator):
+class BodyTag(PairedTagDecorator):
     NAME = 'body'
 
     def __init__(self, content):

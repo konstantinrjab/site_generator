@@ -1,7 +1,7 @@
-from decorators.AbstractPairedTagDecorator import AbstractPairedTagDecorator
+from decorators.PairedTagDecorator import PairedTagDecorator
 
 
-class ParagraphTag(AbstractPairedTagDecorator):
+class ParagraphTag(PairedTagDecorator):
     NAME = 'p'
 
     def __init__(self, content):

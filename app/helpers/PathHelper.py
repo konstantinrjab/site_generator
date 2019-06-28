@@ -9,4 +9,4 @@ class PathHelper:
 
     @staticmethod
     def get_image_folder():
-        return os.path.join(os.getcwd(), AppConst.SITE_DIRECTORY, AppConst.IMAGE_SUBFOLDER)
+        return os.path.join(PathHelper.get_site_folder(), AppConst.IMAGE_SUBFOLDER)
