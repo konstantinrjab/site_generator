@@ -13,7 +13,7 @@ class ImageGenerator:
         image = self.__create_image()
         image.save(os.path.join(PathHelper.get_image_folder(), filename))
 
-        return self.__get_image_source_tag(filename)
+        return self.__get_source_path(filename)
 
     def __get_image_path(self, filename):
         return PathHelper.get_image_folder() + filename
@@ -24,5 +24,5 @@ class ImageGenerator:
 
         return image
 
-    def __get_image_source_tag(self, filename):
+    def __get_source_path(self, filename):
         return os.path.join(AppConst.IMAGE_SUBFOLDER, filename)
